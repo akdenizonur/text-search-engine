@@ -6,7 +6,6 @@
 #include <string.h>
 #include <ctype.h>
 
-// Renkli cikti icin ANSI renk kodlari
 #define COLOR_RED     "\x1b[31m"
 #define COLOR_GREEN   "\x1b[32m"
 #define COLOR_YELLOW  "\x1b[33m"
@@ -17,9 +16,9 @@
 #define MAX_WORD_LENGTH 256
 #define MAX_FILES 10
 
-// Kullanacagimiz fonksiyonlarin prototipleri
 void toLowerCase(char *str);
 int countWordInLine(const char *line, const char *word, int exactMatch);
-int searchInSingleFile(const char *filename, const char *searchWord, int exactMatch);
+// logFile parametresi eklendi
+int searchInSingleFile(const char *filename, const char *searchWord, int exactMatch, FILE *logFile);
 
-#endif // SEARCH_ENGINE_H
+#endif
